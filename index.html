@@ -3,26 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ombre</title>
-    <link rel="stylesheet" href="https://aquaticcalf.github.io/comic.css">
-    <link rel="shortcut icon" href="https://aquaticcalf.github.io/sam.png" type="image/x-icon">
+    <title>test</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/themes/light.css" />
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.9.0/cdn/shoelace-autoloader.js"></script>
 </head>
 <body class="bg-black">
-    <div class="min-h-screen text-[20vw] flex items-center justify-center text-gray-200" onclick="window.location.href='https://github.com/aquaticcalf/ennui'">
-        <div class="cursor-pointer flex hover:gap-10 hover:text-[#4B0082]">
-            o
-            <span class="text-gray-400 hover:text-[#007990]">m</span>b
-            <span class="text-gray-400 hover:text-[#007990]">r</span>e
+    <sl-split-panel  position="60">
+        <div
+          slot="start"
+          class="h-screen bg-[greenyellow]"
+          style="display: flex; align-items: center; justify-content: center; overflow: hidden"
+        >
+          code
         </div>
-    </div>
-    <div class="text-white p-5 w-full">
-            <div class="text-3xl">a smart lil game engine</div>
-            <div class="my-2 text-gray-400">being made by sam</div>
-            <hr class="mt-2 mb-1 border-[#3f3f41]">
-            <div class="flex flex-col gap-2">
-                work in progress
+        <div slot="end">
+          <sl-split-panel vertical  position="70" class="h-screen">
+            <div
+              slot="start"
+              style="height: 100%; background: blue; display: flex; align-items: center; justify-content: center; overflow: hidden"
+            >
+              <canvas class="grow bg-black"></canvas>
             </div>
-    </div>
+            <div
+              slot="end"
+              style="height: 100%; background: red; display: flex; align-items: center; justify-content: center; overflow: hidden"
+            >
+              drag assets here
+            </div>
+          </sl-split-panel>
+        </div>
+      </sl-split-panel>      
 </body>
 </html>
